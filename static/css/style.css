@@ -11,6 +11,11 @@ h1 {
     font-size: 5rem;
 }
 
+footer {
+    position: static;
+    bottom: 0;
+}
+
 .title {
     height: 200px;
 }
@@ -32,16 +37,6 @@ h1 {
 
 .fonty {
     font-family: 'Saira Semi Condensed', sans-serif;
-}
-
-#text {
-    letter-spacing: 2px;
-}
-
-#image {
-    width: 150px;
-    height: 150px;
-    display: inline-block;
 }
 
 .box {
@@ -73,5 +68,20 @@ h1 {
 }
 
 .box:hover .box-caption {
+    cursor: pointer;
     opacity: 1;
+}
+
+.loginform {
+    width: 50%;
+}
+
+#text {
+    letter-spacing: 2px;
+}
+
+#image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
 }
