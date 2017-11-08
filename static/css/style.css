@@ -11,6 +11,10 @@ h1 {
     font-size: 5rem;
 }
 
+section article footer div h5:hover {
+    cursor: pointer;
+}
+
 .title {
     height: 200px;
 }
