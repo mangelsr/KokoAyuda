@@ -15,6 +15,11 @@ section article footer div h5:hover {
     cursor: pointer;
 }
 
+footer {
+    position: static;
+    bottom: 0;
+}
+
 .title {
     height: 200px;
 }
@@ -36,16 +41,6 @@ section article footer div h5:hover {
 
 .fonty {
     font-family: 'Saira Semi Condensed', sans-serif;
-}
-
-#text {
-    letter-spacing: 2px;
-}
-
-#image {
-    width: 150px;
-    height: 150px;
-    display: inline-block;
 }
 
 .box {
@@ -77,5 +72,20 @@ section article footer div h5:hover {
 }
 
 .box:hover .box-caption {
+    cursor: pointer;
     opacity: 1;
+}
+
+.loginform {
+    width: 50%;
+}
+
+#text {
+    letter-spacing: 2px;
+}
+
+#image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
 }
