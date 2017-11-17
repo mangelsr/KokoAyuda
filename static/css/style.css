@@ -78,8 +78,9 @@ footer {
     opacity: 1;
 }
 
-.loginform {
-    width: 50%;
+.loginform, .registerform {
+    width: 40%;
+    display: inline-block;
 }
 
 .card {
@@ -105,11 +106,11 @@ footer {
     height: 400px;
 }
 
-#registro {
+#forgot {
     float: right;
     margin-top: 17px;
 }
 
-#registro a {
+#forgot a {
     color: green;
 }
