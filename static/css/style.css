@@ -52,6 +52,11 @@ footer {
     margin: 0 auto;
 }
 
+.box img {
+    height: 230px;
+    width: 100%;
+}
+
 .box .box-caption {
     position: absolute;
     bottom: 0;
