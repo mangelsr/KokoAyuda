@@ -83,17 +83,24 @@ footer {
     opacity: 1;
 }
 
-.loginform, .registerform {
-    width: 40%;
-    display: inline-block;
-}
-
 .card {
     background-color:rgba(0, 0, 0, 0);
 }
 
 .card-header {
     background-color: rgba(255, 255, 255, 0.75);
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.icon {
+    display: inline-block;
 }
 
 #text {
