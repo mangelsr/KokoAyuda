@@ -25,7 +25,7 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item py-lg-4">
-						<a class="nav-link text-uppercase fonty" href="index.html">Home
+						<a class="nav-link text-uppercase fonty" href="index.html">Inicio
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
@@ -39,7 +39,7 @@
 						<a class="nav-link text-uppercase fonty" href="kokoa.html">Cont&aacute;ctanos</a>
 					</li>
 					<li class="nav-item active py-lg-4">
-						<a class="nav-link text-uppercase fonty" href="login.html">Login</a>
+						<a class="nav-link text-uppercase fonty" href="login.html">Acceder</a>
 					</li>
 				</ul>
 			</div>
@@ -47,8 +47,9 @@
 	</nav>
 
 	<div class="container">
+		
 		<div class="row justify-content-between">
-			<form class="col-lg-5 col-sm-10 mx-auto fady p-3 my-4">
+			<form class="col-lg-5 col-sm-10 mx-auto fady p-3 my-4" id="loginForm">
 				<span><h4 class="fonty">Inicia sesi&oacute;n</h4></span>
 				<div class="my-4">
 					<!-- <label for="emailInput">Email</label> -->
@@ -72,24 +73,31 @@
 				</div>
 			</form>
 		
-			<form class="col-lg-5 col-sm-10 mx-auto fady p-3 my-4">
+			<form class="col-lg-5 col-sm-10 mx-auto fady p-3 my-4" id="registerForm">
+				<div id="failAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+					Usuario no se pudo registrar correctamente
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
 				<span><h4 class="fonty">¿No tienes cuenta? ¡Reg&iacute;strate ahora!</h4></span>
 				<div class="form-group">
-					<input type="text" class="form-control" id="nameInput" placeholder="Nombre">
+					<input type="text" class="form-control" id="nameInput" placeholder="Nombre" required pattern=.{10,20}>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" id="idInput" placeholder="Matr&iacute;cula">
+					<input type="number" class="form-control" id="idInput" placeholder="Matr&iacute;cula" required pattern=".{9}">
+					<div id="idFeedback" class="error-feedback"></div>
 				</div>
 				<div class="form-group">
-					<input type="email" class="form-control" id="emailInput" placeholder="Correo ESPOL">
+					<input type="email" class="form-control" id="emailInput" placeholder="Correo ESPOL" required pattern=.{10,35}>
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" id="passwd" placeholder="Contraseña">
+					<input type="password" class="form-control" id="passwdInput" placeholder="Contraseña" required pattern=.{8,}>
 				</div>
 				<div class="form-group">
-					<input type="passwordConfirm" class="form-control" id="passwdConfirm" placeholder="Confirme contraseña">
+					<input type="password" class="form-control" id="passwdConfirmInput" placeholder="Confirme contraseña" required pattern=.{8,}>
 				</div>
-				<button type="submit" class="btn btn-outline-success">Reg&iacute;strate</button>
+				<button id="btnRegistrar" type="submit" class="btn btn-outline-success">Reg&iacute;strate</button>
 			</form>
 		</div>
 	</div>
@@ -102,5 +110,10 @@
 
 	<script src="../static/ext/jquery/jquery-3.2.1.min.js"></script>
 	<script src="../static/ext/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script> -->
+	
+	<script src="../static/js/register.js"></script>
 </body>
 </html>
