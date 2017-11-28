@@ -1,27 +1,5 @@
 $(document).ready(function() {
-
-    // $("#registerForm").validate({
-    //     debug: true
-    // });
       
-    $("#idInput").focusout(function (event) {
-        $.getJSON( './data/users.json', function(data) {
-            let disponible = true;
-            let idInput = $("#idInput").val();
-            for (usuario in data['users']){
-                if (data['users'][usuario]['matricula'] === idInput) {
-                    disponible = false;
-                    break;
-                }
-            }
-            if (!disponible){
-                $("#idFeedback").text("Usuario ya registrado").css("color", "red");;
-            }
-            else
-                $("#idFeedback").text("");
-        });
-    });
-
     $("#btnRegistrar").click(function (event) {
         event.preventDefault();
         let form = document.getElementById("registerForm");
@@ -66,15 +44,51 @@ $(document).ready(function() {
         }
     });
 
-    // $("#passwdConfirmInput").keyup(function (event) {
-    //     if ($(this).val() !== $("#passwdInput").val()) {
-    //         console.log("Diferente");
-    //         $(this).parent().removeClass("has-success");
-    //         $(this).parent().addClass("has-error");
-    //     } else {
-    //         console.log("Iguales");
-    //         $(this).parent().removeClass("has-error");
-    //         $(this).parent().addClass("has-success");
-    //     }
-    // });
+    $("#nameInput").focusout(function (event){
+        mostrarError($("#nombreFeedback"), $(this));
+    });
+
+
+    $("#idInput").focusout(function (event){
+        $.getJSON( './data/users.json', function(data) {
+            let disponible = true;
+            let idInput = $("#idInput").val();
+            for (usuario in data['users']){
+                if (data['users'][usuario]['matricula'] === idInput) {
+                    disponible = false;
+                    break;
+                }
+            }
+            console.log(disponible);
+            if (disponible)
+                $("#idInput")[0].setCustomValidity("");
+            else
+                $("#idInput")[0].setCustomValidity("Usuario ya registrado.");
+        });
+        mostrarError($("#idFeedback"), $(this));
+    });
+
+
+    $("#emailInput").focusout(function (event){
+        mostrarError($("#emailFeedback"), $(this));
+    });
+
+    $("#passwdInput").focusout(function (event){
+        mostrarError($("#passwordFeedback"), $(this));
+    });
+
+    $("#passwdConfirmInput").focusout(function (event){
+        if ($("#passwdInput").val() === $(this).val()) {
+            $(this)[0].setCustomValidity("");
+        } else {
+            $(this)[0].setCustomValidity("Las contrasenas deben coincidir.");
+        }
+        mostrarError($("#passwdConfirmFeedback"), $(this));
+    });
+
+    function mostrarError(elemento, input){
+        elemento.hide();
+        elemento.text(input[0].validationMessage);
+        elemento.fadeIn();
+    }
 });

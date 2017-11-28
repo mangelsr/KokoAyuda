@@ -53,12 +53,12 @@
 				<span><h4 class="fonty">Inicia sesi&oacute;n</h4></span>
 				<div class="my-4">
 					<!-- <label for="emailInput">Email</label> -->
-					<input type="text" class="form-control" id="loginIdInput" aria-describedby="idMsg" placeholder="Matr&iacute;cula">
+					<input type="text" class="form-control" id="loginIdInput" aria-describedby="idMsg" placeholder="Matr&iacute;cula" required pattern="[0-9].{8}">
 					<small id="idMsg>" class="form-text text-muted">Esta informacion es privada y no ser&aacute; compartida de ninguna manera</small>
 				</div>
 				<div class="my-4">
 					<!-- <label for="passwd">Contraseña</label> -->
-					<input type="password" class="form-control" id="passwd" placeholder="Contraseña">
+					<input type="password" class="form-control" id="passwd" placeholder="Contraseña" required pattern=.{8,}>
 				</div>
 				<div class="my-4 was-validated">
 					<label class="custom-control custom-checkbox">
@@ -77,19 +77,23 @@
 				<span><h4 class="fonty">¿No tienes cuenta? ¡Reg&iacute;strate ahora!</h4></span>
 				<div class="form-group">
 					<input type="text" class="form-control" id="nameInput" placeholder="Nombre" required pattern=.{10,20}>
+					<div id="nombreFeedback" class="invalid"></div>
 				</div>
 				<div class="form-group">
-					<input type="number" class="form-control" id="idInput" placeholder="Matr&iacute;cula" required pattern=".{9}">
-					<div id="idFeedback" class="error-feedback"></div>
+					<input type="text" class="form-control" id="idInput" placeholder="Matr&iacute;cula" required pattern="[0-9].{8}">
+					<div id="idFeedback" class="invalid"></div>
 				</div>
 				<div class="form-group">
 					<input type="email" class="form-control" id="emailInput" placeholder="Correo ESPOL" required pattern=.{10,35}>
+					<div id="emailFeedback" class="invalid"></div>
 				</div>
 				<div class="form-group">
 					<input type="password" class="form-control" id="passwdInput" placeholder="Contraseña" required pattern=.{8,}>
+					<div id="passwordFeedback" class="invalid"></div>
 				</div>
 				<div class="form-group">
 					<input type="password" class="form-control" id="passwdConfirmInput" placeholder="Confirme contraseña" required pattern=.{8,}>
+					<div id="passwdConfirmFeedback" class="invalid"></div>
 				</div>
 				<button id="btnRegistrar" type="submit" class="btn btn-outline-success">Reg&iacute;strate</button>
 			</form>
@@ -104,10 +108,6 @@
 
 	<script src="../static/ext/jquery/jquery-3.2.1.min.js"></script>
 	<script src="../static/ext/bootstrap/js/bootstrap.bundle.min.js"></script>
-	
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script> -->
-	
 	<script src="../static/js/register.js"></script>
 </body>
 </html>
