@@ -1,53 +1,53 @@
 {
   "data": [
-    [
-      "FCNM",
-      "Calculo de una variable",
-      "Examen Parcial-2017-2T",
-      "Ayudante que subio el recurso"
-    ],
-    [
-      "FCNM",
-      "Calculo de varias variables",
-      "Examen Parcial-2017-2T",
-      "Ayudante que subio el recurso"
-    ],
-    [
-      "FIEC",
-      "Fundamentos de programacion",
-      "Examen Parcial-2017-1T",
-      "Ayudante que subio el recurso"
-    ],
-    [
-      "FIEC",
-      "Programacion orientada a objetos",
-      "Examen Parcial-2017-1T",
-      "Ayudante que subio el recurso"
-    ],
-    [
-      "FIEC",
-      "Programacion orientada a objetos",
-      "Examen Parcial-2017-2T",
-      "Ayudante que subio el recurso"
-    ],
-    [
-      "FIEC",
-      "Lenguajes de programacion",
-      "Examen Parcial-2017-1T",
-      "Ayudante que subio el recurso"
-    ],
-    [
-      "FIEC",
-      "Programacion de sistemas",
-      "Examen Parcial-2017-1T",
-      "Ayudante que subio el recurso"
-    ],
-    [
-      "FIEC",
-      "Desarrollo de aplicaciones web",
-      "Examen Parcial-2017-1T",
-      "Ayudante que subio el recurso"
-    ]
+    {
+      "Facultad": "FCNM",
+      "Materia": "Calculo de una variable",
+      "Recurso": "Examen Parcial-2017-2T",
+      "Autor": "Ayudante que subio el recurso"
+    },
+    {
+      "Facultad": "FCNM",
+      "Materia": "Calculo de varias variables",
+      "Recurso": "Examen Parcial-2017-2T",
+      "Autor": "Ayudante que subio el recurso"
+    },
+    {
+      "Facultad": "FIEC",
+      "Materia": "Fundamentos de programacion",
+      "Recurso": "Examen Parcial-2017-1T",
+      "Autor": "Ayudante que subio el recurso"
+    },
+    {
+      "Facultad": "FIEC",
+      "Materia": "Programacion orientada a objetos",
+      "Recurso": "Examen Parcial-2017-1T",
+      "Autor": "Ayudante que subio el recurso"
+    },
+    {
+      "Facultad": "FIEC",
+      "Materia": "Programacion orientada a objetos",
+      "Recurso": "Examen Parcial-2017-2T",
+      "Autor": "Ayudante que subio el recurso"
+    },
+    {
+      "Facultad": "FIEC",
+      "Materia": "Lenguajes de programacion",
+      "Recurso": "Examen Parcial-2017-1T",
+      "Autor": "Ayudante que subio el recurso"
+    },
+    {
+      "Facultad": "FIEC",
+      "Materia": "Programacion de sistemas",
+      "Recurso": "Examen Parcial-2017-1T",
+      "Autor": "Ayudante que subio el recurso"
+    },
+    {
+      "Facultad": "FIEC",
+      "Materia": "Desarrollo de aplicaciones web",
+      "Recurso": "Examen Parcial-2017-1T",
+      "Autor": "Ayudante que subio el recurso"
+    }
   ]
 }
       
